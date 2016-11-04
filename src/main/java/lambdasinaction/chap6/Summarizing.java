@@ -35,6 +35,8 @@ public class Summarizing {
     }
 
     private static int calculateTotalCalories() {
+        //return menu.stream().collect(reducing(0, Dish::getCalories, (x, y) -> x + y));
+
         return menu.stream().collect(summingInt(Dish::getCalories));
     }
 
@@ -51,6 +53,7 @@ public class Summarizing {
     }
 
     private static String getShortMenuCommaSeparated() {
+        //return menu.stream().collect(reducing("", Dish::getName, (x, y) -> x + ", " + y));
         return menu.stream().map(Dish::getName).collect(joining(", "));
     }
 }

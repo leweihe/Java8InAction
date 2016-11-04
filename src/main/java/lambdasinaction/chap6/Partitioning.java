@@ -16,6 +16,8 @@ public class Partitioning {
         System.out.println("Most caloric dishes by vegetarian: " + mostCaloricPartitionedByVegetarian());
         System.out.println("All calories: " + sumAllCalories());
         System.out.println("All dishes name: " + getShortMenuCommaSeparated());
+
+
     }
 
     private static Map<Boolean, List<Dish>> partitionByVegeterian() {
